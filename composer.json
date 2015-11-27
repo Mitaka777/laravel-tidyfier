@@ -1,0 +1,28 @@
+{
+    "name": "roumen/tidyfier",
+    "description": "Tidyfier for Laravel.",
+    "homepage": "https://roumen.it/projects/laravel-tidyfier",
+    "keywords": ["laravel", "tidyfier", "html tidy"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roumen Damianoff",
+            "email": "roumen@dawebs.com",
+            "role": "Developer",
+            "homepage": "https://roumen.it"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5"
+    },
+    "autoload": {
+        "psr-0": {
+            "Roumen\\Tidyfier": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
