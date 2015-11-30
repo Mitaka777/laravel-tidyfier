@@ -25,33 +25,64 @@ class Tidyfier
                                ];
 
 
+    /**
+     * Set config options
+     *
+     * @return void
+    */
     public static function setConfig($config = [])
     {
         static::$config = $config;
     }
 
 
+    /**
+     * Get config array
+     *
+     * @return array
+    */
     public static function getConfig()
     {
         return static::$config;
     }
 
 
+    /**
+     * Set doctype value
+     *
+     * @return void
+    */
     public static function setDoctype($doctype = '')
     {
         static::$doctype = $doctype;
     }
 
 
+    /**
+     * Get doctype value
+     *
+     * @return string
+    */
     public static function getDoctype()
     {
         return static::$doctype;
     }
 
 
-    // code, doctype, encoding, config
+    /**
+     * Returns tydified code
+     *
+     * @param string $code
+     * @param string $doctype
+     * @param string $encoding
+     * @param array $config
+     *
+     * @return string
+    */
     public static function tidyfy($code = '', $doctype = null, $encoding = null, $config = null)
     {
+        if(!extension_loaded('tidy')) return $code;
+
         if (!$config) $config = static::$config;
         if (!$encoding) $encoding = static::$encoding;
         if ($doctype === null) $doctype = static::$doctype;
