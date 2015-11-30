@@ -70,7 +70,7 @@ class Tidyfier
 
 
     /**
-     * Returns tydified code
+     * Returns tidyfied code
      *
      * @param string $code
      * @param string $doctype
