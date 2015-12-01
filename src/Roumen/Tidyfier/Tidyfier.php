@@ -15,6 +15,7 @@ class Tidyfier
     protected static $encoding = 'utf8';
     protected static $doctype = '<!DOCTYPE html>';
     protected static $config = [
+                                'newline'               => 'LF',
                                 'indent'                => 2,
                                 'indent-spaces'         => 4,
                                 'wrap'                  => 200,
@@ -90,7 +91,7 @@ class Tidyfier
         $tidy->parseString($code, $config, $encoding);
         $tidy->cleanRepair();
 
-        ($doctype == '') ? $output = $tidy->value : $output = $doctype . "\r\n" . $tidy->value;
+        ($doctype == '') ? $output = $tidy->value : $output = $doctype . "\n" . $tidy->value;
 
         return $output;
     }
