@@ -19,7 +19,6 @@ class Tidyfier
                                 'indent-spaces'         => 4,
                                 'wrap'                  => 200,
                                 'doctype'               => 'omit',
-                                'ajax'                  => false,
                                 'new-blocklevel-tags'   => 'article,aside,canvas,dialog,embed,figcaption,figure,footer,header,hgroup,nav,output,progress,section,video',
                                 'new-inline-tags'       => 'audio,bdi,command,datagrid,datalist,details,keygen,mark,meter,rp,rt,ruby,source,summary,time,track,wbr',
                                ];
